@@ -39,17 +39,50 @@ class Person {
     public String getPlaceOfBirth(){
         return placeOfBirth;
     }
+
+    // Declaram un SETTER (o functie care se ocupa DOAR SA SCRIE date in obiect) si va scrie numele persoanei in obiectul nostru.
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Declaram un SETTER (o functie care se ocupa DOAR SA SCRIE date in obiect) si va scrie varsta persoane in obiectul nostru. Daca varsta ce o declaram de la tastatura este mai mica de 0 atunci va da eroare.
+    public void setAge(int age){
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            System.out.println("ERROR ! The age can't be negative !");
+        }
+    }
+
+    // Declaram un SETTER (o functie care se ocupa DOAR SA SCRIE date in obiect) si va scrie locul nasterii persoanei in obiectul nostru.
+    public void setPlaceOfBirth(String placeOfBirth){
+        this.placeOfBirth = placeOfBirth;
+    }
 }
 
 public class MyFirstProject {
     public static void main(String[] args) {
 
-        // Aici folosindu-ne de CONSTRUCTORUL definit mai sus in clasa Person o sa cream un array (o lista) de persoane.
-        Person[] people = {
-                new Person("Mihai", 28, "Campulung Moldovenesc"),
-                new Person("Florentin", 30, "Sadova"),
-                new Person("Donald Trump", 73, "United States of America")
-        };
+        // Declaram prima persoana folosindu-ne de SETTERS (functiile care scriu date in obiectul nostru Person)
+        Person person1 = new Person();
+        person1.setName("Mihai");
+        person1.setAge(-99);
+        person1.setPlaceOfBirth("Campulung Moldovenesc");
+
+        // Declaram a doua persoana
+        Person person2 = new Person();
+        person2.setName("Florentin");
+        person2.setAge(30);
+        person2.setPlaceOfBirth("Sadova");
+
+        // Declaram a treia persoana
+        Person person3 = new Person();
+        person3.setName("Donald Trump");
+        person3.setAge(75);
+        person3.setPlaceOfBirth("United States of America");
+
+        // Aici cream o lista cu persoanele de mai sus
+        Person[] people = { person1, person2, person3 };
 
         /*
         Aici avem un FOR. Atunci cand vezi acest keyword sa te gandesti automat ca el e folosit ca sa parcurgi o lista de elemente.
