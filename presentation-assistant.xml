@@ -1,0 +1,10 @@
+<application>
+  <component name="PresentationAssistant">
+    <option name="alternativeKeymap">
+      <KeymapDescription>
+        <option name="displayText" value="for Win/Linux" />
+        <option name="name" value="Mac OS X 10.5+" />
+      </KeymapDescription>
+    </option>
+  </component>
+</application>
