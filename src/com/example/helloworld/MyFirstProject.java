@@ -10,6 +10,7 @@ class Person {
     public String placeOfBirth;    // Locul nasterii care e tot de tip String ( adica poate contine orice tip de litere, cifre, chiar si litere chinezesti).
 
     // Tot in clasa Person am creat un CONSTRUCTOR care are 3 parametri si care ne ajuta mai tarziu sa definim Persoane folosind cele 3 proprietati de mai sus (name, age, placeOfBirth).
+    // CONSTRUCTORUL are MEREU acelasi nume ca si CLASA in care e creat.
     Person(String name, int age, String placeOfBirth) {
 
         /* `this` este un keyword folosit sa accesezi variabilele definite in clasa curenta (te uiti unde incepe acolada { dupa cuvantul CLASS
